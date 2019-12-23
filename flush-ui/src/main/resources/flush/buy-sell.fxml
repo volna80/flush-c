@@ -1,0 +1,151 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.text.Font?>
+<HBox xmlns:fx="http://javafx.com/fxml/1" prefHeight="600.0" styleClass="buy-sell-root"
+      xmlns="http://javafx.com/javafx/8.0.66" fx:controller="com.volna80.flush.ui.controllers.BuySellController">
+    <children>
+        <VBox fx:id="leftPanel" maxWidth="120.0" prefHeight="200.0" prefWidth="120.0" spacing="5.0"
+              BorderPane.alignment="CENTER">
+            <children>
+                <GridPane xmlns:fx="http://javafx.com/fxml">
+                    <columnConstraints>
+                        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0"/>
+                        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0"/>
+                        <ColumnConstraints xmlns:fx="http://javafx.com/fxml/1" hgrow="SOMETIMES" minWidth="10.0"
+                                           prefWidth="100.0" xmlns="http://javafx.com/javafx/8"/>
+                    </columnConstraints>
+                    <rowConstraints>
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES"/>
+                    </rowConstraints>
+                    <children>
+                        <Button fx:id="size1" mnemonicParsing="false" onAction="#onQty1" prefWidth="100.0"
+                                styleClass="button-standard" text="4">
+                            <font>
+                                <Font size="10.0"/>
+                            </font>
+                            <GridPane.margin>
+                                <Insets bottom="2.0" left="2.0" right="2.0" top="2.0"/>
+                            </GridPane.margin>
+                        </Button>
+                        <Button xmlns:fx="http://javafx.com/fxml/1" fx:id="size2" mnemonicParsing="false"
+                                onAction="#onQty2" prefWidth="100.0" styleClass="button-standard" text="10"
+                                GridPane.columnIndex="1" xmlns="http://javafx.com/javafx/8">
+                            <font>
+                                <Font size="10.0"/>
+                            </font>
+                            <GridPane.margin>
+                                <Insets bottom="2.0" left="2.0" right="2.0" top="2.0"/>
+                            </GridPane.margin>
+                        </Button>
+                        <Button xmlns:fx="http://javafx.com/fxml/1" fx:id="size3" mnemonicParsing="false"
+                                onAction="#onQty3" prefWidth="100.0" styleClass="button-standard" text="20"
+                                GridPane.columnIndex="2" xmlns="http://javafx.com/javafx/8">
+                            <font>
+                                <Font size="10.0"/>
+                            </font>
+                            <GridPane.margin>
+                                <Insets bottom="2.0" left="2.0" right="2.0" top="2.0"/>
+                            </GridPane.margin>
+                        </Button>
+                    </children>
+                </GridPane>
+                <TextField fx:id="quantity" prefHeight="25.0" prefWidth="42.0" promptText="quantity"
+                           GridPane.columnIndex="1" GridPane.rowIndex="1">
+                    <VBox.margin>
+                        <Insets bottom="2.0" left="2.0" right="2.0" top="2.0"/>
+                    </VBox.margin>
+                </TextField>
+                <Button mnemonicParsing="false" onAction="#cancelAll" prefWidth="116.0" styleClass="button-standard"
+                        text="cancel all">
+                    <VBox.margin>
+                        <Insets bottom="2.0" left="2.0" right="2.0" top="2.0"/>
+                    </VBox.margin>
+                    <padding>
+                        <Insets bottom="2.0" left="2.0" right="2.0" top="2.0"/>
+                    </padding>
+                </Button>
+                <Label xmlns:fx="http://javafx.com/fxml/1" fx:id="eventTypeName" prefWidth="104.0"
+                       styleClass="label-standard" text="loading ..." wrapText="true"
+                       xmlns="http://javafx.com/javafx/8">
+                    <VBox.margin>
+                        <Insets bottom="2.0" left="2.0" right="2.0" top="2.0"/>
+                    </VBox.margin>
+                </Label>
+                <Label xmlns:fx="http://javafx.com/fxml/1" fx:id="competitionName" prefWidth="104.0"
+                       styleClass="label-standard" text="loading ..." wrapText="true"
+                       xmlns="http://javafx.com/javafx/8">
+                    <VBox.margin>
+                        <Insets bottom="2.0" left="2.0" right="2.0" top="2.0"/>
+                    </VBox.margin>
+                </Label>
+                <Label fx:id="eventName" prefWidth="104.0" styleClass="label-standard" text="loading ..."
+                       wrapText="true">
+                    <VBox.margin>
+                        <Insets bottom="2.0" left="2.0" right="2.0" top="2.0"/>
+                    </VBox.margin>
+
+                </Label>
+                <Label xmlns:fx="http://javafx.com/fxml/1" fx:id="marketName" prefWidth="104.0"
+                       styleClass="label-standard" text="loading ..." wrapText="true"
+                       xmlns="http://javafx.com/javafx/8">
+                    <VBox.margin>
+                        <Insets bottom="2.0" left="2.0" right="2.0" top="2.0"/>
+                    </VBox.margin>
+                </Label>
+                <Label xmlns:fx="http://javafx.com/fxml/1" fx:id="runnerName" prefWidth="104.0"
+                       styleClass="label-standard" text="loading" wrapText="true" xmlns="http://javafx.com/javafx/8">
+                    <VBox.margin>
+                        <Insets bottom="2.0" left="2.0" right="2.0" top="2.0"/>
+                    </VBox.margin>
+                </Label>
+                <StackPane maxHeight="40.0" maxWidth="120.0" prefHeight="40.0" prefWidth="120.0">
+                    <children>
+                        <Rectangle fx:id="marketStatus" arcHeight="5.0" arcWidth="5.0" fill="TRANSPARENT" height="30.0"
+                                   stroke="TRANSPARENT" strokeType="INSIDE" width="100.0"/>
+                        <Label fx:id="marketStatusLabel" styleClass="buy-sell-market-status" text="Label"/>
+                    </children>
+                </StackPane>
+
+                <StackPane maxHeight="40.0" maxWidth="120.0" prefHeight="40.0" prefWidth="120.0">
+                    <children>
+                        <Rectangle fx:id="latency" arcHeight="5.0" arcWidth="5.0" fill="TRANSPARENT" height="30.0"
+                                   stroke="TRANSPARENT" strokeType="INSIDE" width="100.0"/>
+                        <Label fx:id="latencyLabel" styleClass="buy-sell-market-status" text="Label"/>
+                    </children>
+                </StackPane>
+            </children>
+            <BorderPane.margin>
+                <Insets bottom="5.0" left="5.0" right="5.0" top="5.0"/>
+            </BorderPane.margin>
+            <HBox.margin>
+                <Insets bottom="2.0" left="2.0" right="2.0" top="2.0"/>
+            </HBox.margin>
+        </VBox>
+        <GridPane xmlns:fx="http://javafx.com/fxml" fx:id="grid" gridLinesVisible="true" styleClass="buy-sell-grid"
+                  BorderPane.alignment="CENTER" prefWidth="280.0">
+            <columnConstraints>
+                <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0"/>
+                <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0"/>
+                <ColumnConstraints xmlns:fx="http://javafx.com/fxml/1" halignment="CENTER" hgrow="SOMETIMES"
+                                   minWidth="10.0"
+                                   prefWidth="100.0" xmlns="http://javafx.com/javafx/8"/>
+                <ColumnConstraints xmlns:fx="http://javafx.com/fxml/1" halignment="CENTER" hgrow="SOMETIMES"
+                                   minWidth="10.0"
+                                   prefWidth="100.0" xmlns="http://javafx.com/javafx/8"/>
+                <ColumnConstraints xmlns:fx="http://javafx.com/fxml/1" halignment="CENTER" hgrow="SOMETIMES"
+                                   minWidth="10.0"
+                                   prefWidth="100.0" xmlns="http://javafx.com/javafx/8"/>
+                <ColumnConstraints xmlns:fx="http://javafx.com/fxml/1" halignment="CENTER" hgrow="SOMETIMES"
+                                   minWidth="20.0"
+                                   prefWidth="100.0" xmlns="http://javafx.com/javafx/8"/>
+            </columnConstraints>
+            <rowConstraints>
+                <RowConstraints maxHeight="144.0" minHeight="20.0" prefHeight="29.0" vgrow="SOMETIMES"/>
+            </rowConstraints>
+        </GridPane>
+    </children>
+</HBox>

@@ -1,0 +1,213 @@
+/*
+
+ http://www.google.com/design/spec/style/color.html#color-color-palette
+ main color : #C5CAE9 - Indigo 100
+
+ 607D8B - Blue Grey 500
+
+
+ accent color : #E91E63 Pink 500
+
+ yes - #2196F3 Blue 500
+ no - #F44336 Red 500
+*/
+
+@font-face {
+    font-family: 'Roboto';
+    src: url('Roboto-Regular.ttf');
+}
+
+
+.root{
+    -fx-background-color: #C5CAE9;
+    -fx-font-size: 10pt;
+    -fx-font-family: "Roboto";
+}
+
+.tab-pane{
+    -fx-background-color: #C5CAE9;
+}
+
+.tab-content-area{
+    -fx-background-color: #C5CAE9;
+}
+
+.tab-header-background{
+    -fx-background-color: #C5CAE9;
+}
+
+.scroll-pane{
+    -fx-background-color: #C5CAE9;
+}
+
+.grid-pane{
+   -fx-background-color: #C5CAE9;
+}
+
+
+.label-standard {
+    -fx-text-fill: black;
+    -fx-font-size: 10pt;
+    -fx-font-family: "Roboto";
+}
+
+.label {
+    -fx-font-size: 10pt;
+    -fx-font-family: "Roboto";
+}
+
+.button {
+    -fx-background-color: #E91E63;
+    -fx-text-fill: white;
+}
+
+.button-standard {
+    -fx-background-color: #E91E63;
+    -fx-text-fill: white;
+    -fx-font-size: 10pt;
+    -fx-font-family: "Roboto";
+}
+
+
+#####################################################################
+
+
+######################################################################
+
+.buy-sell-root{
+    -fx-background-color: #C5CAE9;
+}
+
+.buy-sell-header {
+}
+
+.buy-sell-grid {
+}
+
+.buy-sell-cell-price-odd {
+    -fx-background-color: #C5CAE9;
+}
+
+.buy-sell-cell-price-even {
+    -fx-background-color: #9FA8DA;
+}
+
+
+
+.buy-sell-cell-label {
+    -fx-font-family: "Roboto";
+}
+
+
+.buy-sell-cell-place-yes-odd {
+    -fx-background-color: derive(#2196F3,75%);
+}
+
+.buy-sell-cell-yes-odd {
+    -fx-background-color:derive(#2196F3,50%);
+}
+
+.buy-sell-cell-no-odd {
+    -fx-background-color: derive(#F44336, 50%);
+}
+
+.buy-sell-cell-place-no-odd {
+    -fx-background-color: derive(#F44336, 75%);
+}
+
+
+
+.buy-sell-cell-place-yes-even {
+    -fx-background-color: derive(#2196F3,50%);
+}
+
+.buy-sell-cell-yes-even {
+    -fx-background-color:derive(#2196F3,25%);
+}
+
+.buy-sell-cell-no-even {
+    -fx-background-color: derive(#F44336, 25%);
+}
+
+.buy-sell-cell-place-no-even {
+    -fx-background-color: derive(#F44336, 50%);
+}
+
+
+
+.buy-sell-yes-waiting-order {
+    -fx-background-color: #E91E63;
+}
+
+.buy-sell-no-waiting-order {
+    -fx-background-color: #E91E63;
+}
+
+.buy-sell-yes-cancelling-order {
+    -fx-background-color: #607D8B;
+}
+
+.buy-sell-no-cancelling-order {
+    -fx-background-color: #607D8B;
+}
+
+.buy-sell-market-status{
+    -fx-text-fill: white;
+    -fx-font-size: 10pt;
+    -fx-font-family: "Roboto";
+}
+
+
+/**
+    MARKET OVERVIEW
+*/
+
+.mo-grid-header {
+   -fx-background-color: silver;
+}
+
+.mo-grid-row-odd {
+   -fx-background-color: #C5CAE9;
+}
+
+.mo-grid-row-even {
+   -fx-background-color: #9FA8DA;
+}
+
+.table-cell-green {
+    -fx-background-color: #dcedc8;
+}
+
+.table-cell-green:odd {
+    -fx-background-color: #c5e1a5;
+}
+
+.table-row-cell:selected .table-cell-green {
+    -fx-background-color: #7cb342;
+}
+
+
+.table-cell-warning {
+    -fx-background-color: #F0F4C3;
+}
+
+.table-cell-warning:odd {
+    -fx-background-color: #E6EE9C;
+}
+
+.table-row-cell:selected .table-cell-warning {
+    -fx-background-color: #C0CA33;
+}
+
+.table-cell-error {
+    -fx-background-color: #FFCCBC;
+}
+
+.table-row-cell-error:odd {
+    -fx-background-color: #FFAB91;
+}
+
+
+.table-row-cell:selected .table-cell-error {
+    -fx-background-color: #ff5722;
+}

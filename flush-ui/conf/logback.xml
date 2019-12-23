@@ -1,0 +1,20 @@
+<configuration debug="false" scan="true" scanPeriod="15 seconds">
+
+    <include resource="logback-appenders.xml"/>
+
+    <logger name="com.volna80.flush.ui.server.OrdersControllerDirect" level="INFO">
+        <appender-ref ref="orders"/>
+    </logger>
+
+    <!--<logger name="com.volna80.flush.ui.services.RiskCalculator" level="DEBUG" />-->
+
+    <logger name="com.volna80.flush.server.latency" level="OFF"/>
+
+
+    <root level="INFO">
+        <appender-ref ref="stdout"/>
+        <appender-ref ref="file"/>
+        <appender-ref ref="error"/>
+    </root>
+
+</configuration>
